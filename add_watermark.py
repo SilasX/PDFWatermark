@@ -26,10 +26,10 @@ for i in xrange(num_pages):
     wm_width = float(wm_width)
     wm_height = float(wm_height)
     xpos = 0.5*(page_width - wm_width)
-    ypos = 0.5*(page_height - page_width)
+    ypos = 0.5*(page_height - wm_height)
     # Draw image on Canvas and save PDF in buffer
     imgPath = WATERMARK_PATH
-    imgDoc.drawImage(imgPath, xpos, ypos, wm_width, wm_height)
+    imgDoc.drawImage(imgPath, xpos, ypos, wm_width, wm_height, mask='auto')
     #imgDoc.drawImage(imgPath, 399, 760, 160, 160)    ## at (399,760) with size 160x160
     imgDoc.save()
     # operate on page of PDF
