@@ -4,8 +4,8 @@ from StringIO import StringIO
 from PIL import Image
 
 WATERMARK_PATH = "inputs/watermark.png"
-PDF_PATH = "inputs/phd_preneel_feb1993.pdf"
-OUTPUT_FILE = "outputs/WMfull_phd_preneel_feb1993.pdf"
+PDF_PATH = "inputs/pdfdoc.tex.pdf"
+OUTPUT_FILE = "outputs/WMpdfdoc.tex.pdf"
 
 # Use PyPDF to merge the image-PDF into the template
 infile = PdfFileReader(file(PDF_PATH, "rb"))
